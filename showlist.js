@@ -42,11 +42,7 @@ function add() {
     showList()
     clear()
 }
-let idExists = students.some(student => student.id === id);
-if (idExists) {
-    alert('ID đã tồn tại. Vui lòng nhập ID khác!');
-    return;
-}
+
 
 
 
