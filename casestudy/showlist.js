@@ -36,13 +36,18 @@ function add() {
         alert('Vui lòng nhập đầy đủ thông tin ')
         return;
     }
-
+    let isDuplicate = students.some(students => students.id === id);
+    if (isDuplicate) {
+        alert("Mã sinh viên đã tồn tại! Vui lòng chọn mã khác.");
+        return;
+    }
     let newStudent = new Student(id, name, dateborn, gender, grade , img );
     students.push(newStudent);
     showList()
     clear()
 }
 
+ 
 
 
 
